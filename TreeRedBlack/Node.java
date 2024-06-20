@@ -40,6 +40,7 @@ public class Node {
         this.right = right;
     }
 
+    //Aun dudo si debe ir aqui
     public void changeColor() {
         if (this.color.equals("RED")) {
             this.color = "BLACK";
