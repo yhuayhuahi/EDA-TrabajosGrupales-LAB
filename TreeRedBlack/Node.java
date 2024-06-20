@@ -1,15 +1,24 @@
 public class Node {
     
+    private Node father;
     private int data;
     private String color;
     private Node left;
     private Node right;
 
-    public Node(int data) {
+    public Node(int data, Node father) {
+        this.father = father;
         this.data = data;
         this.color = "RED";
         this.left = null;
         this.right = null;
+    }
+
+    public Node getFather() {
+        return father;
+    }
+    public void setFather(Node father) {
+        this.father = father;
     }
 
     public int getData() {
