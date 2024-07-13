@@ -1,0 +1,43 @@
+.root {
+    -fx-background-color: #e3c5f5;
+    -fx-text-fill: #300549;
+}
+
+/* Contenedores, Paneles o como quieran XD*/
+.custom-pane {
+    -fx-border-color: #300549;
+    -fx-border-width: 1px;
+}
+
+.custom-output {
+    -fx-font-family: "Yusei Magic", "Arial"; /*Pueden poner otra fuente*/
+    -fx-font-size: 13px; 
+    -fx-font-weight: bold;
+}
+
+/* Textos Guia */
+.custom-text {
+    -fx-font-family: "Yusei Magic", "Arial"; /*Pueden poner otra fuente*/
+    -fx-font-size: 13px; 
+    -fx-font-weight: bold;
+}
+
+/* Entradas de Texto */
+.custom-input {
+    -fx-border-color: #300549;
+    -fx-border-width: 1px;
+    -fx-text-fill: #300549;
+    -fx-font-family: "Yusei Magic";
+}
+
+/*Botones*/
+.button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #300549;
+    -fx-font-family: "Yusei Magic";
+}
+
+.button:hover {
+    -fx-background-color: #300549;
+    -fx-text-fill: #ffffff;
+}

@@ -1,18 +1,47 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
+import javafx.scene.control.TextField;
 
 public class SceneController {
 
     @FXML
-    private TextArea myTextArea;
+    private TextField myFindWord;
 
     @FXML
-    void myButton(ActionEvent event) {
-        Stage stage = (Stage) myTextArea.getScene().getWindow();
-        String mytext = myTextArea.getText();
-        System.out.println(mytext);
+    private TextField myInsertWord;
+
+    @FXML
+    private ListView<?> myListWord;
+
+    @FXML
+    private TextArea myOutput;
+
+    @FXML
+    private TextField mySentence;
+
+    @FXML
+    private TextField myWord;
+
+    @FXML
+    void findWord(ActionEvent event) {
+
+    }
+
+    @FXML
+    void insertWord(ActionEvent event) {
+
+    }
+
+    @FXML
+    void insertWordTemp(ActionEvent event) {
+
+    }
+
+    @FXML
+    void replaceWord(ActionEvent event) {
+
     }
 
 }
