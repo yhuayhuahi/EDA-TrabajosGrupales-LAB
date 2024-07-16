@@ -1,8 +1,10 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
+import java.util.List;
+import java.util.ArrayList;
 
 public class SceneController {
 
@@ -13,7 +15,7 @@ public class SceneController {
     private TextField myInsertWord;
 
     @FXML
-    private ListView<?> myListWord;
+    private TextArea myListWord;
 
     @FXML
     private TextArea myOutput;
@@ -25,6 +27,8 @@ public class SceneController {
     private TextField myWord;
 
     Trie trie = new Trie();
+
+    List<String> myWords = new ArrayList<>();
 
     @FXML
     void findWord(ActionEvent event) {
@@ -59,12 +63,35 @@ public class SceneController {
 
     @FXML
     void insertWordTemp(ActionEvent event) {
+        String myWordString = myWord.getText();
+        myWord.setText("");
 
+        String myList = myListWord.getText();
+        if (myList.equals("")) {
+            myListWord.setText(myList + myWordString);
+        } else {
+            myListWord.setText(myList + "\n" + myWordString);
+        }
+        
+        myWords.add(myWordString);
     }
 
     @FXML
     void replaceWord(ActionEvent event) {
+        String sentence = mySentence.getText();
+        
+        Solution mySolution = new Solution();
+        String replaceWords = mySolution.replaceWords(myWords, sentence);
 
+        String myString = myOutput.getText();
+        if (myString.equals("")) 
+            myOutput.setText(myString + "Oración Original: " + sentence + "\nOración Modificada: " + replaceWords);
+        else
+            myOutput.setText(myString + "\nOración Original: " + sentence + "\nOración Modificada: " + replaceWords);
+        
+        mySentence.setText("");
+        myWord.setText("");
+        myListWord.setText("");
     }
 
 }

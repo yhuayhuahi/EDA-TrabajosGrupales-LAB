@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="765.0" stylesheets="@styles/containers.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
    <children>
@@ -15,18 +13,18 @@
          <children>
             <TextField fx:id="myInsertWord" layoutX="68.0" layoutY="79.0" styleClass="custom-input" />
             <Button layoutX="93.0" layoutY="222.0" mnemonicParsing="false" onAction="#insertWord" text="INSERTAR" />
-            <Text layoutX="25.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-text" text="Ingrese la palabra a reemplazar" />
+            <Text layoutX="25.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-text" text="Ingrese la palabra a insertar" />
          </children>
       </Pane>
       <Pane layoutX="255.0" prefHeight="336.0" prefWidth="255.0" styleClass="custom-pane">
          <children>
             <TextField fx:id="mySentence" layoutX="11.0" layoutY="40.0" prefHeight="25.0" prefWidth="229.0" styleClass="custom-input" />
-            <ListView fx:id="myListWord" layoutX="28.0" layoutY="157.0" prefHeight="87.0" prefWidth="200.0" styleClass="custom-output" />
             <TextField fx:id="myWord" layoutX="66.0" layoutY="119.0" styleClass="custom-input" />
             <Button layoutX="140.0" layoutY="256.0" mnemonicParsing="false" onAction="#replaceWord" text="REEMPLAZAR" />
             <Text layoutX="68.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-text" text="Ingrese la oración" />
             <Text layoutX="21.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="custom-text" text="Ingrese las palabras a reemplazar" />
             <Button layoutX="28.0" layoutY="256.0" mnemonicParsing="false" onAction="#insertWordTemp" text="AÑADIR" />
+            <TextArea fx:id="myListWord" layoutX="28.0" layoutY="156.0" prefHeight="95.0" prefWidth="197.0" />
          </children>
       </Pane>
       <Pane layoutX="510.0" prefHeight="336.0" prefWidth="255.0" styleClass="custom-pane">
