@@ -24,14 +24,37 @@ public class SceneController {
     @FXML
     private TextField myWord;
 
+    Trie trie = new Trie();
+
     @FXML
     void findWord(ActionEvent event) {
+        String myWord = myFindWord.getText();
+        boolean myBoolean = trie.search(myWord);
 
+        myFindWord.setText("");
+
+        String myString = myOutput.getText();
+
+        String myResponse = myBoolean ? "Palabra Encontrada: ": "Palabra no encontrada: ";
+
+        if (myString.equals("")) 
+            myOutput.setText(myString + myResponse + myWord);
+        else
+            myOutput.setText(myString + "\n" + myResponse + myWord);
     }
 
     @FXML
     void insertWord(ActionEvent event) {
+        String myWord = myInsertWord.getText();
+        trie.insert(myWord);
 
+        myInsertWord.setText("");
+
+        String myString = myOutput.getText();
+        if (myString.equals("")) 
+            myOutput.setText(myString + "Palabra Insertada: " + myWord);
+        else
+            myOutput.setText(myString + "\nPalabra Insertada: " + myWord);
     }
 
     @FXML
